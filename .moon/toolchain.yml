@@ -1,0 +1,4 @@
+node:
+  inferTasksFromScripts: true
+  packageManager: 'pnpm'
+  syncProjectWorkspaceDependencies: true

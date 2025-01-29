@@ -1,0 +1,13 @@
+services:
+  remote-cache:
+    user: 1009:1009
+    container_name: remote-cache
+    image: buchgr/bazel-remote-cache:latest
+    command: --max_size=1000 --dir=/remote-cache/cache 
+    ports:
+      - 9099:9099
+    volumes:
+      - /remote-cache/cache:/remote-cache/cache
+    environment:
+      BAZEL_REMOTE_STORAGE_MODE: zstd
+      BAZEL_REMOTE_GRPC_ADDRESS: 0.0.0.0:9099

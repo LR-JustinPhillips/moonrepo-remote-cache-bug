@@ -1,0 +1,25 @@
+fileGroups:
+  configs:
+    - "*.json"
+    - "*.config.ts"
+    - "/pnpm-lock.yaml"
+  sources:
+    - "src/**/*"
+    - "index.html"
+  assets:
+    - "public/**/*"
+  tests:
+    - "tests/**/*"
+    - "**/__tests__/**/*"
+
+tasks:
+  build:
+    script: "pnpm run build"
+    deps:
+      - "^:build"
+    inputs:
+      - "@files(configs)"
+      - "@files(assets)"
+      - "@files(sources)"
+    outputs:
+      - "dist"

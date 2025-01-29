@@ -1,0 +1,11 @@
+$schema: "https://moonrepo.dev/schemas/workspace.json"
+
+projects:
+  - "projects/**/moon.yml"
+
+vcs:
+  defaultBranch: "main"
+unstable_remote:
+  cache:
+    compression: "zstd"
+  host: "grpc://some.domain.name:9099" # remember to change this

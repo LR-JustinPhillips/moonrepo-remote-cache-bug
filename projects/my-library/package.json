@@ -1,0 +1,24 @@
+{
+	"name": "my-library",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"files": [
+		"./dist"
+	],
+	"exports": {
+		"./*": {
+			"types": "./dist/*/index.d.ts",
+			"import": "./dist/*/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsc"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"typescript": "~5.7.3"
+	}
+}

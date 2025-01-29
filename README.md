@@ -11,7 +11,7 @@ In our case, this was noticed because we had a project with a file larger than t
 - A monorepo with two projects, A and B
   - B depends on A
   - At least two files in A have the same name and contents (but are in different directories)
-    - In our case, our index.ts files both have the same contents that, in the context of their individual directories, do different things
+    - In our case, our index.ts files all have the same contents that, in the context of their individual directories, do different things
   - B contains a file larger than 4MB, which is larger than the cache limit, causing it to not be saved
     - Alternatively, only build A the first time
 - Remote caching

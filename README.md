@@ -42,4 +42,4 @@ In our case, this was noticed because we had a project with a file larger than t
    pnpm i
    moon ci :build
    ```
-   A should be pulled from the cache, while B should have to rebuild again. This should cause B to fail its build process.
+   A should be pulled from the cache, while B should have to rebuild again. This should cause B to fail its build process. If you check `dist` in A, some of the index.js files should be missing from their folders.
